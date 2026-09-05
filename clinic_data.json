@@ -1,0 +1,121 @@
+{
+    "patients": [
+        {
+            "id": "P001",
+            "name": "Ahmed Ali",
+            "age": 30,
+            "phone": "01012345678",
+            "case_type": "regular"
+        },
+        {
+            "id": "P002",
+            "name": "Mariam Hassan",
+            "age": 45,
+            "phone": "01123456789",
+            "case_type": "emergency"
+        },
+        {
+            "id": "P003",
+            "name": "Omar Mohamed",
+            "age": 22,
+            "phone": "01234567890",
+            "case_type": "regular"
+        }
+    ],
+
+    "doctors": [
+        {
+            "id": "D001",
+            "name": "Dr. Sara Ahmed",
+            "specialty": "Cardiology",
+            "schedule": {
+                "Monday": {
+                    "start": "09:00",
+                    "end": "14:00"
+                },
+                "Wednesday": {
+                    "start": "09:00",
+                    "end": "14:00"
+                },
+                "Saturday": {
+                    "start": "10:00",
+                    "end": "15:00"
+                }
+            }
+        },
+        {
+            "id": "D002",
+            "name": "Dr. Mohamed Ali",
+            "specialty": "Pediatrics",
+            "schedule": {
+                "Sunday": {
+                    "start": "10:00",
+                    "end": "15:00"
+                },
+                "Tuesday": {
+                    "start": "10:00",
+                    "end": "15:00"
+                },
+                "Thursday": {
+                    "start": "12:00",
+                    "end": "17:00"
+                }
+            }
+        },
+        {
+            "id": "D003",
+            "name": "Dr. Nada Hassan",
+            "specialty": "Dermatology",
+            "schedule": {
+                "Monday": {
+                    "start": "12:00",
+                    "end": "17:00"
+                },
+                "Wednesday": {
+                    "start": "12:00",
+                    "end": "17:00"
+                },
+                "Friday": {
+                    "start": "10:00",
+                    "end": "15:00"
+                }
+            }
+        }
+    ],
+
+    "appointments": [
+        {
+            "patient_id": "P001",
+            "doctor_id": "D001",
+            "day": "Monday",
+            "time": "10:00",
+            "status": "waiting"
+        },
+        {
+            "patient_id": "P002",
+            "doctor_id": "D001",
+            "day": "Wednesday",
+            "time": "11:00",
+            "status": "waiting"
+        },
+        {
+            "patient_id": "P003",
+            "doctor_id": "D002",
+            "day": "Sunday",
+            "time": "10:00",
+            "status": "completed"
+        }
+    ],
+
+    "queue": [
+        "P002",
+        "P001"
+    ],
+
+    "reports": {
+        "emergencies": [
+            "P002"
+        ],
+        "revenue": 0
+    }
+}
