@@ -1,121 +1,241 @@
 {
+    "users": [
+        {
+            "user_id": "A001",
+            "name": "Clinic Admin",
+            "phone": "01000000000",
+            "role": "admin",
+            "password": "admin123"
+        },
+        {
+            "user_id": "P001",
+            "name": "Ahmed Ali",
+            "phone": "01012345678",
+            "role": "patient",
+            "password": "patient123"
+        },
+        {
+            "user_id": "D001",
+            "name": "Dr. Mohamed Hassan",
+            "phone": "01112345678",
+            "role": "doctor",
+            "password": "doc123"
+        },
+        {
+            "user_id": "N001",
+            "name": "Nour Ahmed",
+            "phone": "01212345678",
+            "role": "nurse",
+            "password": "nurse123"
+        },
+        {
+            "user_id": "D002",
+            "name": "nora",
+            "phone": "01120004456",
+            "role": "doctor",
+            "password": "nora123"
+        },
+        {
+            "user_id": "N002",
+            "name": "menna",
+            "phone": "01234567819",
+            "role": "nurse",
+            "password": "menna123"
+        },
+        {
+            "user_id": "N003",
+            "name": "manon",
+            "phone": "01129874378",
+            "role": "nurse",
+            "password": "manon123"
+        },
+        {
+            "user_id": "P002",
+            "name": "yousef",
+            "phone": "01245673829",
+            "role": "patient",
+            "password": "y123"
+        },
+        {
+            "user_id": "D003",
+            "name": "gada",
+            "phone": "01234568935",
+            "role": "doctor",
+            "password": "g123"
+        }
+    ],
     "patients": [
         {
-            "id": "P001",
-            "name": "Ahmed Ali",
-            "age": 30,
-            "phone": "01012345678",
-            "case_type": "regular"
-        },
-        {
-            "id": "P002",
-            "name": "Mariam Hassan",
-            "age": 45,
-            "phone": "01123456789",
-            "case_type": "emergency"
-        },
-        {
-            "id": "P003",
-            "name": "Omar Mohamed",
-            "age": 22,
-            "phone": "01234567890",
-            "case_type": "regular"
-        }
-    ],
-
-    "doctors": [
-        {
-            "id": "D001",
-            "name": "Dr. Sara Ahmed",
-            "specialty": "Cardiology",
-            "schedule": {
-                "Monday": {
-                    "start": "09:00",
-                    "end": "14:00"
-                },
-                "Wednesday": {
-                    "start": "09:00",
-                    "end": "14:00"
-                },
-                "Saturday": {
-                    "start": "10:00",
-                    "end": "15:00"
-                }
-            }
-        },
-        {
-            "id": "D002",
-            "name": "Dr. Mohamed Ali",
-            "specialty": "Pediatrics",
-            "schedule": {
-                "Sunday": {
-                    "start": "10:00",
-                    "end": "15:00"
-                },
-                "Tuesday": {
-                    "start": "10:00",
-                    "end": "15:00"
-                },
-                "Thursday": {
-                    "start": "12:00",
-                    "end": "17:00"
-                }
-            }
-        },
-        {
-            "id": "D003",
-            "name": "Dr. Nada Hassan",
-            "specialty": "Dermatology",
-            "schedule": {
-                "Monday": {
-                    "start": "12:00",
-                    "end": "17:00"
-                },
-                "Wednesday": {
-                    "start": "12:00",
-                    "end": "17:00"
-                },
-                "Friday": {
-                    "start": "10:00",
-                    "end": "15:00"
-                }
-            }
-        }
-    ],
-
-    "appointments": [
-        {
             "patient_id": "P001",
-            "doctor_id": "D001",
-            "day": "Monday",
-            "time": "10:00",
-            "status": "waiting"
+            "name": "Ahmed Ali",
+            "age": 25,
+            "phone": "01012345678",
+            "case_type": null,
+            "priority": null,
+            "appointments": [
+                "AP002"
+            ]
         },
         {
             "patient_id": "P002",
-            "doctor_id": "D001",
-            "day": "Wednesday",
-            "time": "11:00",
-            "status": "waiting"
-        },
-        {
-            "patient_id": "P003",
-            "doctor_id": "D002",
-            "day": "Sunday",
-            "time": "10:00",
-            "status": "completed"
+            "name": "yousef",
+            "age": 20,
+            "phone": "01245673829",
+            "case_type": null,
+            "priority": null,
+            "appointments": [
+                "AP003"
+            ]
         }
     ],
-
-    "queue": [
-        "P002",
-        "P001"
+    "doctors": [
+        {
+            "doctor_id": "D001",
+            "name": "Dr. Mohamed Hassan",
+            "specialty": "Cardiology",
+            "phone": "01112345678",
+            "rate": 1.5,
+            "working_days": [
+                "Saturday",
+                "Monday",
+                "Wednesday"
+            ],
+            "working_hours": {
+                "start": "10:00",
+                "end": "15:00"
+            },
+            "availability": true,
+            "assigned_nurses": [
+                "N001"
+            ],
+            "appointment_duration": 30
+        },
+        {
+            "doctor_id": "D002",
+            "name": "nora",
+            "specialty": "Cardiology",
+            "phone": "01120004456",
+            "rate": 60.0,
+            "working_days": [
+                "Saturday",
+                "Sunday",
+                "Monday"
+            ],
+            "working_hours": {
+                "start": "09:00",
+                "end": "02:00"
+            },
+            "availability": true,
+            "assigned_nurses": [
+                "N003"
+            ],
+            "appointment_duration": 30
+        },
+        {
+            "doctor_id": "D003",
+            "name": "gada",
+            "specialty": "Pediatrics",
+            "phone": "01234568935",
+            "rate": 65.0,
+            "appointment_duration": 20,
+            "working_days": [
+                "Sunday",
+                "Wednesday",
+                "Friday"
+            ],
+            "working_hours": {
+                "start": "02:00",
+                "end": "07:00"
+            },
+            "availability": true,
+            "assigned_nurses": []
+        }
     ],
-
-    "reports": {
-        "emergencies": [
-            "P002"
-        ],
-        "revenue": 0
+    "nurses": [
+        {
+            "nurse_id": "N001",
+            "name": "Nour Ahmed",
+            "phone": "01212345678",
+            "assigned_doctors": [
+                "D001"
+            ],
+            "availability": true
+        },
+        {
+            "nurse_id": "N002",
+            "name": "menna",
+            "phone": "01234567819",
+            "assigned_doctors": [],
+            "availability": true
+        },
+        {
+            "nurse_id": "N003",
+            "name": "manon",
+            "phone": "01129874378",
+            "assigned_doctors": [
+                "D002"
+            ],
+            "availability": true
+        }
+    ],
+    "appointments": [
+        {
+            "appointment_id": "AP001",
+            "patient_id": "P001",
+            "doctor_id": "D001",
+            "date": "2026-09-08",
+            "time": "10:30",
+            "status": "BOOKED",
+            "case_type": null,
+            "priority": null,
+            "payment_status": "UNPAID"
+        },
+        {
+            "appointment_id": "AP002",
+            "patient_id": "P001",
+            "doctor_id": "D001",
+            "date": "2026-09-07",
+            "time": "12:00",
+            "status": "BOOKED",
+            "case_type": null,
+            "priority": null,
+            "payment_status": "UNPAID"
+        },
+        {
+            "appointment_id": "AP003",
+            "patient_id": "P002",
+            "doctor_id": "D003",
+            "date": "2026-10-02",
+            "time": "03:20",
+            "status": "BOOKED",
+            "case_type": null,
+            "priority": null,
+            "payment_status": "UNPAID"
+        }
+    ],
+    "visits": [],
+    "bills": [],
+    "payments": [],
+    "waiting_queue": [],
+    "action_history": [
+        "Doctor D002 added.",
+        "Nurse N002 added.",
+        "Nurse N003 added and assigned to doctor D002.",
+        "Appointment AP002 booked.",
+        "Patient P002 registered.",
+        "Doctor D003 added.",
+        "Appointment AP003 booked."
+    ],
+    "settings": {
+        "service_rates": {
+            "consultation": 2.5,
+            "examination": 3.75,
+            "emergency": 6.75
+        },
+        "case_priority": {
+            "emergency": 1,
+            "urgent": 2,
+            "regular": 3
+        }
     }
 }
